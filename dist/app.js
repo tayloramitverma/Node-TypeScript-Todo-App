@@ -12,4 +12,6 @@ app.use("/todos", todos_1.default);
 app.use((err, req, res, next) => {
     res.status(500).json({ message: err.message });
 });
-app.listen(3000);
+app.listen(5002, () => {
+    console.log("Server is running on port:5002");
+});
